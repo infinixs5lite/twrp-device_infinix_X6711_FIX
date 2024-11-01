@@ -1,5 +1,5 @@
+import /init.custom.rc
 import /init.tee.rc
-import /init.trustonic.rc
 
 on init
     wait /dev/block/platform/soc/11270000.ufshci
