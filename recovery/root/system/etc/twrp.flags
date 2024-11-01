@@ -2,39 +2,39 @@
 # The filesystem that contains the filesystem checker binary (typically /system) cannot
 # specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
 
-#<mnt_point>             <type>    <device>                                       <mnt_flags and options>
+#<mnt_point>             <type>    <device>                                               <mnt_flags and options>
 # User writeable partitions
-/boot                     emmc     /dev/block/by-name/boot                        flags=slotselect;backup;flashimg
-/vendor_boot              emmc     /dev/block/by-name/vendor_boot                 flags=display="Vendor_boot";slotselect;backup;flashimg
-/vbmeta                   emmc     /dev/block/by-name/vbmeta                      flags=display="Vbmeta";slotselect;backup;flashimg
-/vbmeta_vendor            emmc     /dev/block/by-name/vbmeta_vendor               flags=display="Vbmeta_vendor";slotselect;backup;flashimg
-/vbmeta_system            emmc     /dev/block/by-name/vbmeta_system               flags=display="Vbmeta_system";slotselect;backup;flashimg
+/boot                     emmc     /dev/block/by-name/boot                                 flags=slotselect;backup;flashimg
+/vendor_boot              emmc     /dev/block/by-name/vendor_boot                          flags=display="Vendor_boot";slotselect;backup;flashimg
+/vbmeta                   emmc     /dev/block/by-name/vbmeta                               flags=display="Vbmeta";slotselect;backup;flashimg
+/vbmeta_vendor            emmc     /dev/block/by-name/vbmeta_vendor                        flags=display="Vbmeta_vendor";slotselect;backup;flashimg
+/vbmeta_system            emmc     /dev/block/by-name/vbmeta_system                        flags=display="Vbmeta_system";slotselect;backup;flashimg
 
 # Firmware
-/dtbo                     emmc     /dev/block/by-name/dtbo                        flags=display="Dtbo";slotselect;backup
-/metadata                 ext4     /dev/block/by-name/md_udc                      flags=display="Metadata";backup
-/misc                     emmc     /dev/block/by-name/misc                        flags=display="Misc";backup
+/dtbo                     emmc     /dev/block/by-name/dtbo                                 flags=display="Dtbo";slotselect;backup
+/metadata                 ext4     /dev/block/by-name/md_udc                               flags=display="Metadata";backup
+/misc                     emmc     /dev/block/by-name/misc                                 flags=display="Misc";backup
 
 # Sensitive Data
-/nvcfg                    ext4     /dev/block/by-name/nvcfg                       flags=display="Nvcfg";backup
-/persist_image            emmc     /dev/block/by-name/persist                     flags=display="Persist";backup
-/persistent               emmc     /dev/block/by-name/frp                         flags=display="Persistent";backup
+/nvcfg                    ext4     /dev/block/by-name/nvcfg                                flags=display="Nvcfg";backup
+/persist_image            emmc     /dev/block/by-name/persist                              flags=display="Persist";backup
+/persistent               emmc     /dev/block/by-name/frp                                  flags=display="Persistent";backup
 
 # IMEI and modem related
-/nvdata                   ext4     /dev/block/by-name/nvdata                      flags=display="Nvdata";backup
-/protect_f                ext4     /dev/block/by-name/protect1                    flags=display="Protect_f";backup
-/protect_s                ext4     /dev/block/by-name/protect2                    flags=display="Protect_s";backup
-/nvram                    emmc     /dev/block/by-name/nvram                       flags=display="Nvram";backup
+/nvdata                   ext4     /dev/block/by-name/nvdata                               flags=display="Nvdata";backup
+/protect_f                ext4     /dev/block/by-name/protect1                             flags=display="Protect_f";backup
+/protect_s                ext4     /dev/block/by-name/protect2                             flags=display="Protect_s";backup
+/nvram                    emmc     /dev/block/by-name/nvram                                flags=display="Nvram";backup
 
 # Mediatek's Standard Partitions
-/bootloader               emmc     /dev/block/by-name/lk                          flags=display="Bootloader";slotselect;flashimg
-/expdb                    emmc     /dev/block/by-name/expdb                       flags=display="Expdb"
-/logo                     emmc     /dev/block/by-name/logo                        flags=display="Logo";slotselect;backup
-/otp                      emmc     /dev/block/by-name/otp                         flags=display="Otp"
-/seccfg                   emmc     /dev/block/by-name/seccfg                      flags=display="Seccfg"
-/spmfw                    emmc     /dev/block/by-name/spmfw                       flags=display="Spmfw";slotselect
-/tee1                     emmc     /dev/block/by-name/tee1                        flags=display="Tee1"
-/tee2                     emmc     /dev/block/by-name/tee2                        flags=display="Tee2"
+/bootloader               emmc     /dev/block/by-name/lk                                   flags=display="Bootloader";slotselect;flashimg
+/expdb                    emmc     /dev/block/by-name/expdb                                flags=display="Expdb"
+/logo                     emmc     /dev/block/by-name/logo                                 flags=display="Logo";slotselect;backup
+/otp                      emmc     /dev/block/by-name/otp                                  flags=display="Otp"
+/seccfg                   emmc     /dev/block/by-name/seccfg                               flags=display="Seccfg"
+/spmfw                    emmc     /dev/block/by-name/spmfw                                flags=display="Spmfw";slotselect
+/tee1                     emmc     /dev/block/by-name/tee1                                 flags=display="Tee1"
+/tee2                     emmc     /dev/block/by-name/tee2                                 flags=display="Tee2"
 
 # External Storage
 /external_sd              auto     /dev/block/mmcblk0p1 /dev/block/mmcblk0 /dev/block/mmcblk1p1    flags=display="Micro SD Card";storage;wipeingui;removable;backup=0
