@@ -195,4 +195,3 @@
 
 #widevine driver node
 /dev/drm_wv               0660   media      system
-
