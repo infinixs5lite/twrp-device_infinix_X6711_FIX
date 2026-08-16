@@ -1,5 +1,6 @@
 #
-# Copyright (C) 2024 The LineageOS Project
+# Copyright (C) 2024 The Android Open Source Project
+# Copyright (C) 2024 SebaUbuntu's TWRP device tree generator
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -17,16 +18,13 @@ AB_OTA_PARTITIONS += \
     boot \
     dtbo \
     lk \
-    odm \
-    odm_dlkm \
     product \
     system \
     system_ext \
     vbmeta_system \
     vbmeta_vendor \
     vendor \
-    vendor_boot \
-    vendor_dlkm
+    vendor_boot
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
