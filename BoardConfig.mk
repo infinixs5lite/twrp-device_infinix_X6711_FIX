@@ -161,4 +161,4 @@ TARGET_INIT_VENDOR_LIB := libinit_Infinix-X6711
 TARGET_RECOVERY_DEVICE_MODULES := libinit_Infinix-X6711
 
 # Maintainer & version
-TW_DEVICE_VERSION := X6711_Turkishpatriot_sora1504_yoneLLR
+TW_DEVICE_VERSION := X6711_nino
